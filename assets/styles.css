@@ -1551,3 +1551,25 @@ body {
         justify-content: center;
     }
 }
+
+/* ============================================
+   PRINT FRIENDLY STYLES
+   (moved from assets/script.js)
+   ============================================ */
+
+@media print {
+    .navbar,
+    .footer,
+    .cta-section,
+    .btn {
+        display: none;
+    }
+
+    body {
+        background-color: white;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+}

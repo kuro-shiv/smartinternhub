@@ -348,26 +348,7 @@ document.querySelectorAll('.feature-card, .program-card, .testimonial-card, .faq
     observer.observe(el);
 });
 
-/* ============================================
-   UTILITY: PRINT FRIENDLY STYLES
-   ============================================ */
-
-@media print {
-    .navbar,
-    .footer,
-    .cta-section,
-    .btn {
-        display: none;
-    }
-
-    body {
-        background-color: white;
-    }
-
-    .container {
-        max-width: 100%;
-    }
-}
+// Print styles moved to `assets/styles.css`
 
 /* ============================================
    CONSOLE LOG FOR DEBUGGING
