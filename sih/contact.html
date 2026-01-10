@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Contact Smart Intern Hub for inquiries, support, and feedback.">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Contact Us - Smart Intern Hub</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="index.html">Smart Intern Hub</a>
+                </div>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="internships.html">Internships</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="certificate.html">Certificates</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Get in touch with our team</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                
+                <!-- Contact Form -->
+                <div class="contact-form-box">
+                    <h2>Send us a Message</h2>
+                    <form id="contactForm" class="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="contactName">Your Name <span class="required">*</span></label>
+                            <input 
+                                type="text" 
+                                id="contactName" 
+                                name="contactName" 
+                                placeholder="Enter your name"
+                                autocomplete="off"
+                                required
+                            >
+                            <span class="error-message" id="contactNameError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactEmail">Email Address <span class="required">*</span></label>
+                            <input 
+                                type="email" 
+                                id="contactEmail" 
+                                name="contactEmail" 
+                                placeholder="your.email@example.com"
+                                autocomplete="off"
+                                required
+                            >
+                            <span class="error-message" id="contactEmailError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject <span class="required">*</span></label>
+                            <select id="subject" name="subject" required>
+                                <option value="">-- Select Subject --</option>
+                                <option value="General Inquiry">General Inquiry</option>
+                                <option value="Program Details">Program Details</option>
+                                <option value="Technical Support">Technical Support</option>
+                                <option value="Payment Issue">Payment Issue</option>
+                                <option value="Certificate Question">Certificate Question</option>
+                                <option value="Feedback">Feedback</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <span class="error-message" id="subjectError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message <span class="required">*</span></label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                rows="6" 
+                                placeholder="Tell us how we can help..."
+                                required
+                            ></textarea>
+                            <span class="error-message" id="messageError"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+
+                    <!-- Success Message (Initially Hidden) -->
+                    <div id="contactSuccessMessage" class="success-message" style="display: none;">
+                        <div class="success-content">
+                            <div class="success-icon">✓</div>
+                            <h3>Message Sent Successfully!</h3>
+                            <p>Thank you for reaching out. We'll get back to you within 24-48 hours.</p>
+                            <button type="button" class="btn btn-secondary" onclick="resetContactForm()">Send Another</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info-box">
+                    <h2>Get in Touch</h2>
+                    
+                    <div class="info-section">
+                        <h3>📧 Email</h3>
+                        <ul>
+                            <li>
+                                <strong>General Inquiries:</strong><br>
+                                <a href="mailto:info@smartinternhub.com">info@smartinternhub.com</a>
+                            </li>
+                            <li>
+                                <strong>Support & Issues:</strong><br>
+                                <a href="mailto:support@smartinternhub.com">support@smartinternhub.com</a>
+                            </li>
+                            <li>
+                                <strong>Payments:</strong><br>
+                                <a href="mailto:payments@smartinternhub.com">payments@smartinternhub.com</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>⏰ Response Time</h3>
+                        <p>We typically respond to inquiries within 24-48 hours during business days.</p>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>🌐 Follow Us</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link">LinkedIn</a>
+                            <a href="#" class="social-link">Twitter</a>
+                            <a href="#" class="social-link">GitHub</a>
+                            <a href="#" class="social-link">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>How long does it take to hear back?</h4>
+                    <p>We aim to respond within 24-48 hours. Urgent matters get priority.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can I apply if I have no experience?</h4>
+                    <p>Yes! Our Frontend and Python programs are designed for beginners.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Is there a refund policy?</h4>
+                    <p>Please check our Terms & Conditions for detailed refund information.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How do I report a technical issue?</h4>
+                    <p>Email support@smartinternhub.com with details and we'll assist you.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can I take multiple programs?</h4>
+                    <p>Yes, you can enroll in multiple programs. Contact us for bulk enrollment discounts.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Do you offer group trainings?</h4>
+                    <p>Yes, we offer group/corporate training. Email info@smartinternhub.com for details.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Smart Intern Hub</h4>
+                    <p>Professional internship and training for aspiring developers.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="internships.html">Internships</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="certificate.html">Certificates</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: <a href="mailto:info@smartinternhub.com">info@smartinternhub.com</a></p>
+                    <p class="disclaimer">Smart Intern Hub is a private training initiative and does not guarantee employment.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Smart Intern Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>

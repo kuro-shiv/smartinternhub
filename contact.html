@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SkillHub</title>
+    <meta name="description" content="Get in touch with SkillHub. Contact us for inquiries, support, or feedback.">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">SkillHub</a>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="programs.html">Programs</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="programs.html#frontend">Frontend Development</a></li>
+                            <li><a href="programs.html#python">Python Development</a></li>
+                            <li><a href="programs.html#fullstack">Full Stack Development</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="apply.html">Apply</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="certificates.html">Certificates</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you! Get in touch with any questions or feedback.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h2>Send us a Message</h2>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="contactName">Your Name *</label>
+                            <input type="text" id="contactName" name="contactName" required placeholder="Enter your name">
+                            <small class="error-message" id="contactNameError"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactEmail">Email Address *</label>
+                            <input type="email" id="contactEmail" name="contactEmail" required placeholder="your.email@example.com">
+                            <small class="error-message" id="contactEmailError"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">-- Select a subject --</option>
+                                <option value="General Inquiry">General Inquiry</option>
+                                <option value="Program Question">Program Question</option>
+                                <option value="Technical Support">Technical Support</option>
+                                <option value="Certificate Issue">Certificate Issue</option>
+                                <option value="Feedback">Feedback</option>
+                                <option value="Partnership">Partnership Inquiry</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <small class="error-message" id="subjectError"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required rows="6" placeholder="Tell us how we can help..."></textarea>
+                            <small class="error-message" id="messageError"></small>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+
+                    <!-- Success Message -->
+                    <div id="contactSuccessMessage" class="success-message" style="display:none;">
+                        <div class="success-content">
+                            <div class="success-icon">✓</div>
+                            <h3>Message Sent Successfully!</h3>
+                            <p>Thank you for reaching out. We'll get back to you within 24-48 hours.</p>
+                            <button type="button" class="btn btn-secondary" onclick="resetContactForm()">Send Another</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info-wrapper">
+                    <h2>Contact Information</h2>
+                    
+                    <div class="contact-info">
+                        <h3>📧 Email</h3>
+                        <p>
+                            <strong>General Inquiries:</strong><br>
+                            <a href="mailto:info@skillhub.com">info@skillhub.com</a>
+                        </p>
+                        <p>
+                            <strong>Support:</strong><br>
+                            <a href="mailto:support@skillhub.com">support@skillhub.com</a>
+                        </p>
+                        <p>
+                            <strong>Privacy & Compliance:</strong><br>
+                            <a href="mailto:privacy@skillhub.com">privacy@skillhub.com</a>
+                        </p>
+                    </div>
+
+                    <div class="contact-info">
+                        <h3>⏰ Response Time</h3>
+                        <p>We typically respond to inquiries within 24-48 business hours.</p>
+                    </div>
+
+                    <div class="contact-info">
+                        <h3>🌐 Follow Us</h3>
+                        <div class="social-links-contact">
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                                <span>Twitter</span>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                                <span>Instagram</span>
+                            </a>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>How long does it take to hear back?</h4>
+                    <p>We aim to respond to all inquiries within 24-48 hours during business hours. Important matters may take slightly longer.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can I get a refund?</h4>
+                    <p>Please refer to our Terms & Conditions for detailed information about refund policies or contact support@skillhub.com.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How do I report a technical issue?</h4>
+                    <p>Please email support@skillhub.com with details of the issue. Include screenshots if possible to help us assist you faster.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Is SkillHub a registered organization?</h4>
+                    <p>SkillHub is a private training initiative. We are not affiliated with any government body, university, or statutory authority.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can corporate teams enroll?</h4>
+                    <p>Yes! We offer bulk enrollment options for corporate teams. Please contact info@skillhub.com for partnership inquiries.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Do you offer mentorship after program completion?</h4>
+                    <p>For information about post-completion support or extended mentorship, please contact support@skillhub.com.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Location (Optional) -->
+    <section class="location-section">
+        <div class="container">
+            <h2>Serving Students Worldwide</h2>
+            <p>While SkillHub is based in India, our programs are 100% online and serve students from around the globe. Regardless of your location, you can access our programs remotely.</p>
+            <p class="location-note">🌍 Global • 📱 Remote • ⏰ Flexible Learning</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>SkillHub</h4>
+                    <p>Empowering the next generation of developers through hands-on learning and real-world experience.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="certificates.html">Certificates</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" title="LinkedIn">in</a>
+                        <a href="#" title="Twitter">𝕏</a>
+                        <a href="#" title="Instagram">📷</a>
+                        <a href="#" title="GitHub">⚙️</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SkillHub. All rights reserved. | A private training and internship initiative.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>

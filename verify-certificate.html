@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Certificate - SkillHub</title>
+    <meta name="description" content="Verify the authenticity of SkillHub internship certificates.">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">SkillHub</a>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="programs.html">Programs</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="programs.html#frontend">Frontend Development</a></li>
+                            <li><a href="programs.html#python">Python Development</a></li>
+                            <li><a href="programs.html#fullstack">Full Stack Development</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="apply.html">Apply</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="certificates.html">Certificates</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Verify Certificate</h1>
+            <p>Authenticate SkillHub internship certificates using the verification ID</p>
+        </div>
+    </section>
+
+    <!-- Verification Section -->
+    <section class="verify-section">
+        <div class="container">
+            <div class="verification-form-container">
+                <h2>Certificate Verification</h2>
+                <p>Enter the Verification ID from your SkillHub certificate to verify its authenticity.</p>
+
+                <form id="verificationForm" class="verification-form">
+                    <div class="form-group">
+                        <label for="certId">Certificate Verification ID *</label>
+                        <input 
+                            type="text" 
+                            id="certId" 
+                            name="certId" 
+                            required 
+                            placeholder="e.g., SKILLHUB-FST-2026-001"
+                            pattern="SKILLHUB-[A-Z]{2,3}-\d{4}-\d{3}"
+                        >
+                        <small>Format: SKILLHUB-XXX-YYYY-ZZZ</small>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Verify Certificate</button>
+                </form>
+
+                <!-- Verification Result -->
+                <div id="verificationResult" class="verification-result" style="display:none;">
+                    <div class="result-status">
+                        <div class="status-icon" id="statusIcon"></div>
+                        <h3 id="statusText"></h3>
+                    </div>
+
+                    <div id="certificateDetails" class="certificate-details-result" style="display:none;">
+                        <div class="detail-row">
+                            <span class="label">Verification ID:</span>
+                            <span id="resultCertId" class="value"></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Intern Name:</span>
+                            <span id="resultName" class="value"></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Program Domain:</span>
+                            <span id="resultDomain" class="value"></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Program Duration:</span>
+                            <span id="resultDuration" class="value"></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Completion Date:</span>
+                            <span id="resultDate" class="value"></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Status:</span>
+                            <span id="resultStatus" class="value"></span>
+                        </div>
+                    </div>
+
+                    <div id="errorDetails" class="error-details" style="display:none;">
+                        <p id="errorMessage"></p>
+                    </div>
+
+                    <button type="button" class="btn btn-secondary" onclick="resetVerification()">Verify Another</button>
+                </div>
+
+                <!-- Information Box -->
+                <div class="info-box">
+                    <h3>How Verification Works</h3>
+                    <ul>
+                        <li>Each SkillHub certificate includes a unique Verification ID</li>
+                        <li>The ID is in the format: SKILLHUB-[DOMAIN]-[YEAR]-[NUMBER]</li>
+                        <li>Example: SKILLHUB-FED-2026-045 (Frontend Development)</li>
+                        <li>Verification is instant and you'll receive full certificate details</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sample Data for Demo -->
+    <section class="sample-section">
+        <div class="container">
+            <h2>Demo Verification IDs</h2>
+            <p>Try these sample IDs to test the verification system:</p>
+            <div class="sample-ids">
+                <div class="sample-card">
+                    <strong>SKILLHUB-FED-2025-001</strong>
+                    <p>Frontend Development - Priya Sharma</p>
+                    <button type="button" class="btn btn-small" onclick="testVerify('SKILLHUB-FED-2025-001')">Try</button>
+                </div>
+                <div class="sample-card">
+                    <strong>SKILLHUB-PYT-2025-042</strong>
+                    <p>Python Development - Arjun Verma</p>
+                    <button type="button" class="btn btn-small" onclick="testVerify('SKILLHUB-PYT-2025-042')">Try</button>
+                </div>
+                <div class="sample-card">
+                    <strong>SKILLHUB-FST-2026-015</strong>
+                    <p>Full Stack Development - Sarah Khan</p>
+                    <button type="button" class="btn btn-small" onclick="testVerify('SKILLHUB-FST-2026-015')">Try</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>SkillHub</h4>
+                    <p>Empowering the next generation of developers through hands-on learning and real-world experience.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="certificates.html">Certificates</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" title="LinkedIn">in</a>
+                        <a href="#" title="Twitter">𝕏</a>
+                        <a href="#" title="Instagram">📷</a>
+                        <a href="#" title="GitHub">⚙️</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SkillHub. All rights reserved. | A private training and internship initiative.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>

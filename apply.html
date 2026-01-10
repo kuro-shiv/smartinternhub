@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply - SkillHub</title>
+    <meta name="description" content="Apply for our internship programs. Join SkillHub and start your learning journey today.">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">SkillHub</a>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="programs.html">Programs</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="programs.html#frontend">Frontend Development</a></li>
+                            <li><a href="programs.html#python">Python Development</a></li>
+                            <li><a href="programs.html#fullstack">Full Stack Development</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="apply.html">Apply</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="certificates.html">Certificates</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Apply for Internship</h1>
+            <p>Take the first step towards mastering your chosen domain</p>
+        </div>
+    </section>
+
+    <!-- Application Form -->
+    <section class="apply-section">
+        <div class="container">
+            <div class="form-container">
+                <form id="applicationForm" class="application-form">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+                        <small class="error-message" id="fullNameError"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        <small class="error-message" id="emailError"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+91 XXXXX XXXXX">
+                        <small class="error-message" id="phoneError"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="background">College / Educational Background *</label>
+                        <input type="text" id="background" name="background" required placeholder="e.g., B.Tech CSE, 2nd Year">
+                        <small class="error-message" id="backgroundError"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="domain">Selected Domain *</label>
+                        <select id="domain" name="domain" required>
+                            <option value="">-- Select a Program --</option>
+                            <option value="Frontend Development">Frontend Development</option>
+                            <option value="Python Development">Python Development</option>
+                            <option value="Full Stack Development">Full Stack Development</option>
+                        </select>
+                        <small class="error-message" id="domainError"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="skillLevel">Current Skill Level *</label>
+                        <select id="skillLevel" name="skillLevel" required>
+                            <option value="">-- Select your level --</option>
+                            <option value="Beginner">Beginner</option>
+                            <option value="Intermediate">Intermediate</option>
+                        </select>
+                        <small class="error-message" id="skillLevelError"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="motivation">Why do you want to join? *</label>
+                        <textarea id="motivation" name="motivation" required rows="5" placeholder="Tell us about your goals and why you're interested in this program..."></textarea>
+                        <small class="error-message" id="motivationError"></small>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit Application</button>
+                </form>
+
+                <!-- Success Message -->
+                <div id="successMessage" class="success-message" style="display:none;">
+                    <div class="success-content">
+                        <div class="success-icon">✓</div>
+                        <h2>Application Submitted Successfully!</h2>
+                        <p>Thank you for applying to SkillHub's internship program.</p>
+                        <p>We will review your application and reach out to you via email at <strong id="appliedEmail"></strong> with further updates.</p>
+                        <p>Expected response time: 3-5 business days</p>
+                        <a href="index.html" class="btn btn-secondary">Back to Home</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Info Card -->
+            <div class="info-card">
+                <h3>What Happens Next?</h3>
+                <ul>
+                    <li><strong>Review:</strong> Our team reviews your application (3-5 business days)</li>
+                    <li><strong>Interview:</strong> If selected, we'll schedule a brief call</li>
+                    <li><strong>Onboarding:</strong> Once confirmed, you'll receive access to the learning platform</li>
+                    <li><strong>Start Learning:</strong> Begin your 1-month internship journey!</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>SkillHub</h4>
+                    <p>Empowering the next generation of developers through hands-on learning and real-world experience.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="certificates.html">Certificates</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" title="LinkedIn">in</a>
+                        <a href="#" title="Twitter">𝕏</a>
+                        <a href="#" title="Instagram">📷</a>
+                        <a href="#" title="GitHub">⚙️</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SkillHub. All rights reserved. | A private training and internship initiative.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
